@@ -9,7 +9,14 @@
 </head>
 
 <body>
-    <h1>This is product page.</h1>
+    {{-- <h1>{{$products}}</h1> --}}
+    <ul>
+        @foreach ($products as $key=>$product)
+        @if($key===1)
+        <li>{{$key}}-{{$product}}</li>
+        @endif
+        @endforeach
+    </ul>
 </body>
 
 </html>

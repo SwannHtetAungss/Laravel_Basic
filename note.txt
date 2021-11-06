@@ -6,4 +6,7 @@
 
 collection
 ----------
+
+-php artisan optimize  => cache clear
+
 ctrl+e => file search
