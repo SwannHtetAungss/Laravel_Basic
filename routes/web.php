@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\WebFrontend\AboutController;
+use App\Http\Controllers\WebFrontend\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +21,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/about', [AboutController::class, 'aboutPage']);
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/contact', [ContactController::class, 'contactPage']);
 
 Route::get('/products', function () {
     return view('product');
@@ -33,6 +33,4 @@ Route::get('/shops', function () {
     return view('shops.shop');
 });
 
-Route::get('/products/{product_id}/shops/{shop_id}', function ($product_id, $shop_id) {
-    return "This is Product page for product id " . $product_id . "shop id is " . $shop_id;
-});
+Route::get('/products/{product_id}/shops/{shop_id}', [ProductController::class, 'productPage']);
