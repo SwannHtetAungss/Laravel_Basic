@@ -17,4 +17,9 @@ class ProductController extends Controller
         $product_lists = ['cat', 'dog', 'monkey'];
         return view('product', ['products' => $product_lists]);
     }
+
+    public function productDetail($product_id)
+    {
+        return "This is Product for Product Id: " . $product_id;
+    }
 }

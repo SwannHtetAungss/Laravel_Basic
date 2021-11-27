@@ -9,4 +9,8 @@ collection
 
 -php artisan optimize  => cache clear
 
+-yield
+-extends
+-include
+
 ctrl+e => file search
