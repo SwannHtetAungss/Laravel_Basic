@@ -12,8 +12,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function showPromotions(Request $request)
-    {
-        return $request->all();
+    public function homePage(){
+        return view('website.index');
     }
 }
